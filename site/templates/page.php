@@ -5,7 +5,12 @@
 	<section class="page">
 
 		<article>
-			<h1><?php echo html($page->title()) ?></h1>
+			<?php if($page->pagetitle() != ''): ?>
+				<h1><?php echo html($page->pagetitle()) ?></h1>
+			<?php else: ?>
+				<h1><?php echo html($page->title()) ?></h1>
+			<?php endif ?>
+
 			<div><?php echo kirbytext($page->text()) ?></div>
 		</article>
 

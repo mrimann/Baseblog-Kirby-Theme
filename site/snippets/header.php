@@ -32,6 +32,25 @@ Header Snippet for the Baseblog Kirby Theme
 
     <?php echo css('assets/styles/styles.css') ?>
 
+	<?php if($page->enableflattrbutton() == 'TRUE'): ?>
+		<script type="text/javascript">
+			/* <![CDATA[ */
+			(function() {
+				var s = document.createElement('script');
+				var t = document.getElementsByTagName('script')[0];
+
+				s.type = 'text/javascript';
+				s.async = true;
+				s.src = '//api.flattr.com/js/0.6/load.js?'+
+					'mode=manual&uid=mrimann&language=en_GB&category=text';
+
+				t.parentNode.insertBefore(s, t);
+			})();
+			/* ]]> */
+		</script>
+	<?php endif ?>
+
+
 </head>
 
 <body>

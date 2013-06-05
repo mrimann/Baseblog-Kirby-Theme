@@ -3,11 +3,32 @@
 Footer Snippet for the Baseblog Kirby Theme
 *******************************************/
 ?>
+<?php if($page->enableflattrbutton() == 'TRUE'): ?>
+	<div id="share">
+		<div id="flattrButton" />
+	</div>
+<?php endif?>
 		<footer id="colophon">
     	<?php echo kirbytext($site->copyright()) ?>
-  		</footer>
+		</footer>
 
   	</div><!-- #site -->
+
+	<?php if($page->enableflattrbutton() == 'TRUE'): ?>
+		<script type="text/javascript">
+			/* <![CDATA[ */
+			window.onload = function() {
+				FlattrLoader.render({
+					'uid': 'mrimann',
+					'url': '<?php echo $page->url(); ?>',
+					'title': '<?php echo $page->title(); ?>',
+					'description': '<?php echo $page->description(); ?>'
+				}, 'flattrButton', 'replace');
+			}
+			/* ]]> */
+		</script>
+	<?php endif?>
+
 
 	<script type="text/javascript">
 		var _gaq = _gaq || [];

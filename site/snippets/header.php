@@ -32,7 +32,7 @@ Header Snippet for the Baseblog Kirby Theme
 
     <?php echo css('assets/styles/styles.css') ?>
 
-	<?php if($page->enableflattrbutton() == 'TRUE'): ?>
+	<?php if($page->enableflattrbutton() == 'TRUE' || $page->template() == 'article.text'): ?>
 		<script type="text/javascript">
 			/* <![CDATA[ */
 			(function() {

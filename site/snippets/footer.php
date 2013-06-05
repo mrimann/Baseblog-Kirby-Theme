@@ -3,7 +3,7 @@
 Footer Snippet for the Baseblog Kirby Theme
 *******************************************/
 ?>
-<?php if($page->enableflattrbutton() == 'TRUE'): ?>
+<?php if($page->enableflattrbutton() == 'TRUE' || $page->template() == 'article.text'): ?>
 	<div id="share">
 		<div id="flattrButton" />
 	</div>
@@ -14,7 +14,7 @@ Footer Snippet for the Baseblog Kirby Theme
 
   	</div><!-- #site -->
 
-	<?php if($page->enableflattrbutton() == 'TRUE'): ?>
+	<?php if($page->enableflattrbutton() == 'TRUE' || $page->template() == 'article.text'): ?>
 		<script type="text/javascript">
 			/* <![CDATA[ */
 			window.onload = function() {

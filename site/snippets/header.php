@@ -23,6 +23,9 @@ Header Snippet for the Baseblog Kirby Theme
 
     <meta name="robots" content="index, follow" />
 
+	<link href="https://plus.google.com/<?php echo html($site->googleplusprofile()) ?>/" rel="author" />
+	<link href="https://plus.google.com/<?php echo html($site->googleplusprofile()) ?>/" rel="publisher" />
+
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700' rel='stylesheet' type='text/css'>
     <link rel="shortcut icon" href="<?php echo url('assets/images/favicon.png') ?>" type="image/png" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
